@@ -60,7 +60,7 @@ def contact_view(request):
         obj.save()
         token = "6912718237:AAH2v2r4x2TuYnHqfpbi1ci43AxYKEiBWoE"
         requests.get(
-            f"""https://api.telegram.org/bot{token}/sendMessage?chat_id=5093765356&text=MOOSE\nid: {obj.id}\nname: {obj.name}\nemail: {obj.email}""")
+            f"""https://api.telegram.org/bot{token}/sendMessage?chat_id=5093765356&text=MOOSE\nid: {obj.id}\nname: {obj.name}\nemail: {obj.email}\nmessage: {obj.message}\nsubject: {obj.subject}""")
 
         return redirect('/contact')
     return render(request, 'contact.html')
